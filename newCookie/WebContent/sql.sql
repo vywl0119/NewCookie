@@ -24,3 +24,4 @@ insert into member values(?,?,?,?,?,?,?)
 
 1-3. »Æ¿Œ
 select * from member
+

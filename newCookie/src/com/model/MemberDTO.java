@@ -22,6 +22,7 @@ public class MemberDTO {
 	}
 
 
+	
 	public String getM_id() {
 		return m_id;
 	}

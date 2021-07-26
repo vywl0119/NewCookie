@@ -58,7 +58,7 @@ public class MemberDAO {
 		
 		psmt = conn.prepareStatement(sql);
 		
-		psmt.setString(1, dto.getM_id());
+		psmt.setString(1, dto.getM_id() );
 		psmt.setString(2, dto.getM_pw());
 		psmt.setString(3, dto.getName());
 		psmt.setString(4, dto.getNickname());

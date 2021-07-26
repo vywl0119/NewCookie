@@ -49,7 +49,7 @@ public class JoinServiceCon extends HttpServlet {
 		if(cnt > 0) {
 			System.out.println("회원가입 성공");
 		}else {
-			System.out.println("회원가입 실패");
+			System.out.println("회원가입 실패..");
 		}
 		
 	}

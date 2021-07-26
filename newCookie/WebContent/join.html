@@ -10,6 +10,10 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style type="text/css">
+		#wrapper{width: 500px; !important }
+		
+		</style>
 	</head>
 	<body class="single is-preload">
 
@@ -18,107 +22,198 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1><a href="index.html">Future Imperfect</a></h1>
+						<h1><a href="index.html">OBO Diary</a></h1>
 						<nav class="links">
 							<ul>
-								<li><a href="#">Lorem</a></li>
-								<li><a href="#">Ipsum</a></li>
-								<li><a href="#">Feugiat</a></li>
-								<li><a href="#">Tempus</a></li>
-								<li><a href="#">Adipiscing</a></li>
+								<li><a href="#">달력</a></li>
+								<li><a href="#">Q&A</a></li>
+								<li><a href="#">30 Days</a></li>
+								<li><a href="#">자기소개서</a></li>
+								<li><a href="#">키워드</a></li>
+								<li><a href="#">릴레이</a></li>
 							</ul>
 						</nav>
 						<nav class="main">
-							<ul>
-								<li class="search">
-									<a class="fa-search" href="#search">Search</a>
-									<form id="search" method="get" action="#">
-										<input type="text" name="query" placeholder="Search" />
-									</form>
-								</li>
-								<li class="menu">
-									<a class="fa-bars" href="#menu">Menu</a>
-								</li>
-							</ul>
+							
 						</nav>
 					</header>
 
-				<!-- Menu -->
-					<section id="menu">
+						
 
-						<!-- Search -->
-							<section>
-								<form class="search" method="get" action="#">
-									<input type="text" name="query" placeholder="Search" />
-								</form>
-							</section>
-
-						<!-- Links -->
-							<section>
-								<ul class="links">
-									<li>
-										<a href="#">
-											<h3>Lorem ipsum</h3>
-											<p>Feugiat tempus veroeros dolor</p>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<h3>Dolor sit amet</h3>
-											<p>Sed vitae justo condimentum</p>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<h3>Feugiat veroeros</h3>
-											<p>Phasellus sed ultricies mi congue</p>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<h3>Etiam sed consequat</h3>
-											<p>Porta lectus amet ultricies</p>
-										</a>
-									</li>
-								</ul>
-							</section>
-
-						<!-- Actions -->
-							<section>
-								<ul class="actions stacked">
-									<li><a href="#" class="button large fit">Log In</a></li>
-								</ul>
-							</section>
-
-					</section>
-
+					
+						
 				<!-- Main -->
-					<div id="main">
+					<div id="main" align="center">
 
 						<!-- Post -->
 							<article class="post">
 								<header>
 									<div class="title">
-										<h2><a href="#">Magna sed adipiscing</a></h2>
-										<p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p>
+										<h2 align ="center"><a href="#"> OBO Diary </a></h2>
+										<p align="center">회원가입</p>
 									</div>
-									<div class="meta">
-										<time class="published" datetime="2015-11-01">November 1, 2015</time>
-										<a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
-									</div>
+									
 								</header>
-								<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
-								<p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-								<p>Nunc quis dui scelerisque, scelerisque urna ut, dapibus orci. Sed vitae condimentum lectus, ut imperdiet quam. Maecenas in justo ut nulla aliquam sodales vel at ligula. Sed blandit diam odio, sed fringilla lectus molestie sit amet. Praesent eu tortor viverra lorem mattis pulvinar feugiat in turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce ullamcorper tellus sit amet mattis dignissim. Phasellus ut metus ligula. Curabitur nec leo turpis. Ut gravida purus quis erat pretium, sed pellentesque massa elementum. Fusce vestibulum porta augue, at mattis justo. Integer sed sapien fringilla, dapibus risus id, faucibus ante. Pellentesque mattis nunc sit amet tortor pellentesque, non placerat neque viverra. </p>
-								<footer>
-									<ul class="stats">
-										<li><a href="#">General</a></li>
-										<li><a href="#" class="icon solid fa-heart">28</a></li>
-										<li><a href="#" class="icon solid fa-comment">128</a></li>
-									</ul>
-								</footer>
-							</article>
+								<!-- container -->
+    <div id="container" role="main">
+        <div id="content">
+            <!-- tg-text=title -->
+           
+            <div class="join_content">
+                <!-- 아이디, 비밀번호 입력 -->
+                <div class="row_group">
+                    <div class="join_row">
+                        <h3 class="join_title"><label for="id">아이디</label></h3>
+                        <span class="ps_box int_id">
+							<input type="text" id="id" name="id" class="int" title="ID" maxlength="20">
+							<br><br>
+                            
+                        <span class="error_next_box" id="idMsg" style="display:none" aria-live="assertive"></span>
+                    </div>
 
+                    <div class="join_row">
+                        <h3 class="join_title"><label for="pswd1">비밀번호</label></h3>
+                        <span class="ps_box int_pass" id="pswd1Img">
+							<input type="password" id="pswd1" name="pswd1" class="int" title="비밀번호 입력" aria-describedby="pswd1Msg" maxlength="20">
+                            <span class="lbl"><span id="pswd1Span" class="step_txt"></span></span>
+						</span>
+                        <span class="error_next_box" id="pswd1Msg" style="display:none" aria-live="assertive">5~12자의 영문 소문자, 숫자와 특수기호(_)만 사용 가능합니다.</span>
+						<br><br>
+                        <h3 class="join_title"><label for="pswd2">비밀번호 재확인</label></h3>
+                        <span class="ps_box int_pass_check" id="pswd2Img">
+							<input type="password" id="pswd2" name="pswd2" class="int" title="비밀번호 재확인 입력" aria-describedby="pswd2Blind" maxlength="20">
+						</span>
+                        <span class="error_next_box" id="pswd2Msg" style="display:none" aria-live="assertive"></span>
+                        <br><br>
+                    </div>
+                </div>
+                <!-- // 아이디, 비밀번호 입력 -->
+
+                <!-- 이름, 생년월일 입력 -->
+                <div class="row_group">
+
+                    <!-- lang = ko_KR -->
+                    <div class="join_row">
+                        <h3 class="join_title"><label for="name">이름</label></h3>
+                        <span class="ps_box box_right_space">
+							<input type="text" id="name" name="name" title="이름" class="int" maxlength="40">
+						</span>
+                        <span class="error_next_box" id="nameMsg" style="display:none" aria-live="assertive"></span>
+                    </div>
+                    <br><br>
+                    <!-- lang = ko_KR -->
+
+                    <div class="join_row join_birthday">
+                        <h3 class="join_title"><label for="yy">생년월일</label></h3>
+                        <div class="bir_wrap">
+                            <div class="bir_yy">
+								<span class="ps_box">
+									<input type="date" id="yy" placeholder="년(4자)" aria-label="년(4자)" class="int" maxlength="4">
+								</span>
+                            </div>
+                            <br><br>
+                           
+                        </div>
+                        <span class="error_next_box" id="birthdayMsg" style="display:none" aria-live="assertive"></span>
+                    </div>
+
+                    <div class="join_row join_sex">
+                        <h3 class="join_title"><label for="gender">성별</label></h3>
+                        <div class="ps_box gender_code">
+                            <select id="gender" name="gender" class="sel" aria-label="성별">
+                                <option value="" selected="">성별</option>
+                                        <option value="M">남자</option>
+                                        <option value="W">여자</option>
+                                        
+                            </select>
+                            <br><br>
+                        </div>
+                    </div>
+                    <span class="error_next_box" id="genderMsg" style="display:none" aria-live="assertive"></span>
+
+                    <div class="join_row join_email">
+                        <h3 class="join_title"><label for="gender">이메일</label></h3>
+							<input type="text" id="email" name="email" placeholder="이메일 입력" aria-label="이메일 입력" class="int" maxlength="100">
+						</span>
+                    </div>
+                    <span class="error_next_box" id="emailMsg" style="display:none" aria-live="assertive"></span>
+                </div>
+                <br><br>
+                <!-- // 이름, 생년월일 입력 -->
+
+                <!-- 휴대전화 번호, 인증번호 입력 -->
+                <div class="join_row join_mobile" id="mobDiv">
+                    <h3 class="join_title"><label for="phoneNo">휴대전화</label></h3>
+                   
+                    <div class="int_mobile_area">
+						<span class="ps_box int_mobile">
+							<input type="tel" id="phoneNo" name="phoneNo" placeholder="전화번호 입력" aria-label="전화번호 입력" class="int" maxlength="16">
+							<label for="phoneNo" class="lbl"></label>
+						</span>
+                       <br><br>
+                            </div>
+                            <span class="error_next_box" id="pphoneNoMsg" style="display:none" aria-live="assertive">필수 정보입니다.</span>
+                            <span class="error_next_box" id="pauthNoMsg" style="display:none" aria-live="assertive">필수 정보입니다.</span>
+                            <span class="error_next_box" id="pjoinMsg" style="display:none" aria-live="assertive">필수 정보입니다.</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- tg-display -->
+
+                <!-- tg-display=>{"보호자 아이핀 인증": [], "오류 메시지": []} -->
+                <div class="join_minor tab" id="pipinDiv" style="display:none">
+                    <ul class="tab_m" role="tablist">
+                        <li class="m1" role="presentation"><a href="#" id="tabPrtsMobile" role="tab" aria-selected="false" aria-controls="wa_tab_phone">휴대전화인증</a></li>
+                        <li class="m2" role="presentation"><a href="#" onclick="return false;" class="on" role="tab" aria-selected="true" aria-controls="wa_tab_ipin">아이핀 인증</a></li>
+                    </ul>
+                    <div id="wa_tab_ipin" role="tabpanel">
+                        <div class="terms_chk_all">
+                            <span class="input_chk">
+                                <input type="checkbox" id="iagree_all" class="chk">
+                                <label for="iagree_all" class="ipin_label">
+                                    <span class="txt">보호자 인증이 완료되면 보호자 이름, 생년월일, 성별, 중복가입확인정보(DI)가 보호자 동의 확인을 위하여 아동의 정보와 함께 저장되며, <strong class="point">아동이 성년이 되는 시점에 파기됩니다.</strong></span>
+                                </label>
+                            </span>
+                            <span class="error_next_box" id="iagreeMsg" style="display:none" aria-live="assertive">필수 정보입니다.</span>
+                        </div>
+                        <div class="ipin_box">
+                            <p class="ipin_certify_txt">보호자 명의의 아이핀으로 인증 후<br> 가입이 가능 합니다.</p>
+                            <button type="button" id="btnIpinPopup" class="ipin_certify_btn" title="새 창">
+                                <span>아이핀 인증하기</span>
+                            </button>
+                            <span class="error_next_box" id="ipopupMsg" style="display:none" aria-live="assertive">필수 정보입니다.</span>
+                        </div>
+                        <div class="join_row join_mobile">
+                            <h3 class="join_title"><label for="iphoneNo">휴대전화</label></h3>
+                            <div class="int_mobile_area">
+                                <span class="ps_box int_mobile">
+                                    <input type="tel" id="iphoneNo" name="iphoneNo" placeholder="전화번호 입력" aria-label="전화번호 입력" class="int" maxlength="16">
+                                </span>
+                                <a href="#" class="btn_verify btn_primary" id="btnIpinSend" role="button">
+                                    <span class="">인증번호 받기</span>
+                                </a>
+                            </div>
+                            <div class="ps_box_disable box_right_space" id="iauthNoBox">
+                                <input type="tel" id="iauthNo" name="iauthNo" placeholder="인증번호 입력하세요" aria-label="인증번호 입력하세요" aria-describedby="iwa_verify" class="int" disabled="" maxlength="4">
+                                <label id="iwa_verify" for="iauthNo" class="lbl">
+                                    <span class="wa_blind">인증받은 후 인증번호를 입력해야 합니다.</span>
+                                    <span class="input_code" id="iauthNoCode" style="display:none;"></span>
+                                </label>
+                            </div>
+                            <span class="error_next_box" id="iphoneNoMsg" style="display:none" aria-live="assertive">필수 정보입니다.</span>
+                            <span class="error_next_box" id="iauthNoMsg" style="display:none" aria-live="assertive">필수 정보입니다.</span>
+                            <span class="error_next_box" id="ijoinMsg" style="display:none" aria-live="assertive">필수 정보입니다.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn_area">
+                    <button type="button" id="btnJoin" class="btn_type btn_primary"><span>가입하기</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // container -->
 					</div>
 
 				<!-- Footer -->
@@ -130,7 +225,7 @@
 							<li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
 							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
 						</ul>
-						<p class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a href="http://unsplash.com">Unsplash</a>.</p>
+						<p class="copyright">&copy; Cookie cookie: <a href="http://html5up.net">New Cookie</a>. 하잉: <a href="http://unsplash.com">੯•́ʔ̋ ͙͛*͛ ͙͛*</a>.</p>
 					</section>
 
 			</div>

@@ -1,4 +1,4 @@
-package model;
+package com.model;
 
 public class MemberDTO {
 	private String m_id;
@@ -6,22 +6,23 @@ public class MemberDTO {
 	private String name;
 	private String nickname;
 	private String birth;
-	private String gende;
+	private String gender;
 	private String email;
 	
 	
-	public MemberDTO(String m_id, String m_pw, String name, String nickname, String birth, String gende, String email) {
+	public MemberDTO(String m_id, String m_pw, String name, String nickname, String birth, String gender, String email) {
 
 		this.m_id = m_id;
 		this.m_pw = m_pw;
 		this.name = name;
 		this.nickname = nickname;
 		this.birth = birth;
-		this.gende = gende;
+		this.gender = gender;
 		this.email = email;
 	}
 
 
+	
 	public String getM_id() {
 		return m_id;
 	}
@@ -73,13 +74,13 @@ public class MemberDTO {
 	}
 
 
-	public String getGende() {
-		return gende;
+	public String getGender() {
+		return gender;
 	}
 
 
-	public void setGende(String gende) {
-		this.gende = gende;
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
 
 

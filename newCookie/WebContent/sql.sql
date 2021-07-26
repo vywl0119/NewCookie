@@ -16,6 +16,7 @@ constraint member_nickname_uk unique(nickname),
 constraint member_email_uk unique(email)
 );
 
+
 1-2. 테스트 값 넣기
 insert into member values('test', 'test', 'test', 'test', '21-07-26', 'W', 'test')
 

@@ -1,24 +1,36 @@
-<!DOCTYPE HTML>
-<!--
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<%@page import="com.model.MemberDTO"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
 <html>
-	<head>
-	
-	           
-	
-		<title>Strata by HTML5 UP</title>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+		
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main_log.css" />
 		<style type="text/css">
+		
+		#header input{
+ 					 width:300px;
+ 	 			height:30px;
+ 	 				
+			}
+		
 			
-	
 		</style>
-	</head>
+
+
+</head>
 	<body class="is-preload">
+
+<%
+	// ·Î±×ÀÎÇÑ ´Ð³×ÀÓ °¡Á®¿À±â
+	MemberDTO info = (MemberDTO)session.getAttribute("info");
+
+%>
 
 		<!-- Header -->
 		
@@ -26,12 +38,12 @@
 						<h1><a href="index.html">OBO Diary</a></h1>
 						<nav class="links">
 							<ul>
-							 <li><a href="#">ë‹¬ë ¥</a></li>
+							 <li><a href="#">´Þ·Â</a></li>
                         	 <li><a href="#">Q&A</a></li>
                         	 <li><a href="#">30 Days</a></li>
-                       	 	 <li><a href="#">ìžê¸°ì†Œê°œì„œ</a></li>
-                        	 <li><a href="#">í‚¤ì›Œë“œ</a></li>
-                       		 <li><a href="#">ë¦´ë ˆì´</a></li>
+                       	 	 <li><a href="#">ÀÚ±â¼Ò°³¼­</a></li>
+                        	 <li><a href="#">Å°¿öµå</a></li>
+                       		 <li><a href="#">¸±·¹ÀÌ</a></li>
 							</ul>
 						</nav>
 						<nav class="main">
@@ -41,13 +53,34 @@
 		
 		
 			<header id="header">
-				<div class="inner">
-					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
-					<h1><strong>ë‹‰ë„¤ìž„</strong>, ë‹˜ ì–´ì„œì˜¤ì„¸ìš”<br />
-					<h4> ì˜¤ëŠ˜ë„ OBO Diaryë¥¼<br> ì°¾ì•„ì£¼ì…”ì„œ ê°ì‚¬í•©ë‹ˆë‹¤.<br /></h4>
-					 <a href="#"  style="font-size: 2px">  í”„ë¡œí•„ ìˆ˜ì •   </a> <a href="#"  style="margin-left: 10px; font-size: 2px">   ê°œì¸ì •ë³´ ìˆ˜ì •  </a>
-				</div>
+			<%if(info!=null){ %>
 			
+					<div class="inner">
+						<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
+						<h1><strong><%= info.getNickname()%></strong>, ´Ô ¾î¼­¿À¼¼¿ä<br />
+						<h4> ¿À´Ãµµ OBO Diary¸¦<br> Ã£¾ÆÁÖ¼Å¼­ °¨»çÇÕ´Ï´Ù.<br /></h4>
+						 <a href="#"  style="font-size: 2px"> ·Î±×¾Æ¿ô    </a> <a href="#"  style="margin-left: 10px; font-size: 2px">  ÇÁ·ÎÇÊ ¼öÁ¤   </a> <a href="#"  style="margin-left: 10px; font-size: 2px">   °³ÀÎÁ¤º¸ ¼öÁ¤  </a>
+					</div>
+			<%}else{ %>
+			
+			
+			
+					<div class="inner">
+						<a href="#" class="image avatar"><img   src="images/avatar.jpg" alt="" /></a>	 
+						 <form action="LoginServiceCon" method = "post" accept-charset="EUC-KR">
+						 <input width="300px" placeholder="ID¸¦ ÀÔ·ÂÇÏ¼¼¿ä." style="margin-top: 2px;" type="text" id="id" name="id" >
+						 <br>
+						 <input placeholder="PW¸¦ ÀÔ·ÂÇÏ¼¼¿ä." style="margin-top: 2px;" type="password" id="pw" name="pw"> 
+						 <br>
+						 <input  type="submit" id="btn_login" value="·Î±×ÀÎ">
+						
+						 </form>
+						
+						 <a href="#"  style="font-size: 2px"> ¾ÆÀÌµð Ã£±â   </a> <a href="#"  style="margin-left: 10px; font-size: 2px"> ºñ¹Ð¹øÈ£ Ã£±â  </a>
+						 <a href="#"  style="margin-left: 10px; font-size: 2px"> È¸¿ø°¡ÀÔ  </a>
+					</div>
+				
+			<%} %>
 			</header>
 			
 
@@ -57,21 +90,21 @@
 				<article class="post">
 								<header>
 									<div class="title">
-										<h2><a href="single.html">ì§ˆë¬¸ë²ˆí˜¸</a></h2>
+										<h2><a href="single.html">Áú¹®¹øÈ£</a></h2>
 										<br>
-										<h2>ë‹¹ì‹ ì€ ì¹œêµ¬ì—ê²Œ ì–¼ë§ˆë‚˜ ëˆì„ ë¹Œë ¤ì£¼ì‹¤ ìˆ˜ ìžˆë‚˜ìš”?</h2>
-										<p>ì˜¤ëŠ˜ ì¹œêµ¬ì—ê²Œ ë¹Œë ¤ì¤„ ìˆ˜ ìžˆëŠ” ê¸ˆì•¡ì€? </p>
+										<h2>´ç½ÅÀº Ä£±¸¿¡°Ô ¾ó¸¶³ª µ·À» ºô·ÁÁÖ½Ç ¼ö ÀÖ³ª¿ä?</h2>
+										<p>¿À´Ã Ä£±¸¿¡°Ô ºô·ÁÁÙ ¼ö ÀÖ´Â ±Ý¾×Àº? </p>
 									</div>
 									<div class="meta">
 										<time class="published" datetime="2015-11-01">07 26, 2021</time>
-										<a href="#" class="author"><span class="name">1ë²ˆì§¸  7ì›”</span><img src="images/avatar.jpg" alt=""></a>
+										<a href="#" class="author"><span class="name">1¹øÂ°  7¿ù</span><img src="images/avatar.jpg" alt=""></a>
 									</div>
 								</header>
 								<a href="single.html" class="image featured"><img src="images/pic01.jpg" alt=""></a>
-								<p>ìœ ì €ì˜ ë‹µë³€ì„ ë°›ì•„ ì ëŠ” ê³³ì´ì—ì—¬ </p>
+								<p> ·Î±×ÀÎ ÇÏ¼Å¾ß ÀÌ¿ëÇÒ ¼ö ÀÖ´Â ÆäÀÌÁö ÀÔ´Ï´Ù. </p>
 								<footer>
 									<ul class="actions" style="margin-left: 175px;">
-										<li ><a href="single.html"  class="button large">ì œì¶œí•˜ê¸° </a></li>
+										<li ><a href="join.html"  class="button large">È¸¿ø°¡ÀÔ ÇÏ·¯ °¡±â </a></li>
 									</ul>
 									<ul class="stats">
 										<li><a href="#" class="icon solid fa-heart"></a></li>
@@ -86,32 +119,32 @@
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
 								<h3>2021-07-25</h3>
-								<p>ì§€ë‚œ ì§ˆë¬¸ëž€ì´ì—ìš”</p>
+								<p>Áö³­ Áú¹®¶õÀÌ¿¡¿ä</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
 								<h3>2021-07-24</h3>
-								<p>ì§€ë‚œ ì§ˆë¬¸ëž€ì´ì—ìš”</p>
+								<p>Áö³­ Áú¹®¶õÀÌ¿¡¿ä</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /></a>
 								<h3>2021-07-23</h3>
-								<p>ì§€ë‚œ ì§ˆë¬¸ëž€ì´ì—ìš”</p>
+								<p>Áö³­ Áú¹®¶õÀÌ¿¡¿ä</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /></a>
 								<h3>2021-07-22</h3>
-								<p>ì§€ë‚œ ì§ˆë¬¸ëž€ì´ì—ìš”</p>
+								<p>Áö³­ Áú¹®¶õÀÌ¿¡¿ä</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="" /></a>
 								<h3>2021-07-21</h3>
-								<p>ì§€ë‚œ ì§ˆë¬¸ëž€ì´ì—ìš”</p>
+								<p>Áö³­ Áú¹®¶õÀÌ¿¡¿ä</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /></a>
 								<h3>2021-07-20</h3>
-								<p>ì§€ë‚œ ì§ˆë¬¸ëž€ì´ì—ìš”</p>
+								<p>Áö³­ Áú¹®¶õÀÌ¿¡¿ä</p>
 							</article>
 						</div>
 						<ul class="actions">
@@ -120,7 +153,7 @@
 						</ul>
 					</section>
 
-
+					
 			</div>
 
 		<!-- Footer -->
@@ -144,5 +177,5 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
-	</body>
+</body>
 </html>

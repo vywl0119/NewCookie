@@ -21,6 +21,12 @@ public class MemberDTO {
 		this.email = email;
 	}
 
+	public MemberDTO(String m_id, String nickname) {
+
+		this.m_id = m_id;	
+		this.nickname = nickname;
+
+	}
 
 	
 	public String getM_id() {

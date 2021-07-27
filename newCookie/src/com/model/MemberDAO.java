@@ -12,6 +12,7 @@ public class MemberDAO {
 	PreparedStatement psmt = null;
 	int cnt = 0;
 	ResultSet rs = null;
+	MemberDTO info = null;
 	
 	public void conn() {
 		try {
@@ -79,5 +80,32 @@ public class MemberDAO {
 		return cnt;
 
 	}
+
+	
+	// 로그인 메소드
+	public MemberDTO login(String  m_id, String m_pw) {
+	      try {
+	         conn();
+	         String sql = "select * from member where m_id = ? and m_pw = ?";
+	         psmt = conn.prepareStatement(sql);
+	         psmt.setString(1, m_id);
+	         psmt.setString(2, m_pw);
+	         rs = psmt.executeQuery();
+	         
+	         if(rs.next()) {
+	        	String id = rs.getString("m_id");
+	            String nickname = rs.getString("nickname");
+	            
+	            info = new MemberDTO(id,nickname);
+	            		
+
+	         }
+	         
+	      } catch (SQLException e) {
+	         e.printStackTrace();
+	      } finally {
+	         close();
+	      } return info;
+	   }
 	
 }

@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class ChallengeDAO {
 	
@@ -78,4 +79,34 @@ public class ChallengeDAO {
 
 
 			}
+
+	   
+		public ArrayList<ChallengeDTO> showChallenge(){
+			ArrayList<ChallengeDTO> challenge_list = new ArrayList<ChallengeDTO>();
+			try {		
+				conn();
+				String sql = "select * from my_challenge";
+				psmt = conn.prepareStatement(sql);
+				rs = psmt.executeQuery();
+				
+				while(rs.next()) {
+					int money = rs.getInt("money");
+					String habit = rs.getString("habit");
+					String start_date = rs.getString("start_date");
+					String end_date = rs.getString("end_date");
+					String account = rs.getString("account");
+					String m_id = rs.getString("m_id");
+					
+					ChallengeDTO dto = new ChallengeDTO(m_id, habit, money, account, start_date, end_date);
+					challenge_list.add(dto);
+					
+				}
+				
+			}catch (SQLException e) {
+				e.printStackTrace();
+			} finally {
+				close();
+			} return challenge_list;
+		}
+
 }

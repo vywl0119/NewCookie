@@ -1,3 +1,6 @@
+<%@page import="com.model.ChallengeDTO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.model.ChallengeDAO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -10,7 +13,13 @@
 		<link rel="stylesheet" href="assets/css/30days.css" />
 	</head>
 	<body class="is-preload">
+<%
 
+	ChallengeDAO dao = new ChallengeDAO();
+	ArrayList<ChallengeDTO> challenge_list = new ArrayList<ChallengeDTO>();
+	challenge_list = dao.showChallenge();
+	
+%>
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
@@ -39,16 +48,19 @@
 					<section id="two">
 						<h2>나만의 챌린지</h2>
 						<div class="row">
+						
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
-								<h3>하루에 물 2L 마시기</h3>
+								<h3><%=challenge_list.get(1).getHabit() %></h3>
 								<p>여기에는 뭐 쓸 지 생각 안 해봤어요</p>
 							</article>
+							
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="30days.html" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
 								<h3>새로운 챌린지를 추가해보세요!</h3>
 								<p>프로젝트란 참 힘든 것이네요</p>
 							</article>
+							
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="30days.html" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /></a>
 								<h3>새로운 챌린지를 추가해보세요!</h3>

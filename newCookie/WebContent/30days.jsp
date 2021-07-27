@@ -52,7 +52,7 @@
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
 								<h3><%=challenge_list.get(1).getHabit() %></h3>
-								<p>여기에는 뭐 쓸 지 생각 안 해봤어요</p>
+								<p>여기에는 뭐 쓸 지 생각 안 해봤어요 저어두요</p>
 							</article>
 							
 							<article class="col-6 col-12-xsmall work-item">

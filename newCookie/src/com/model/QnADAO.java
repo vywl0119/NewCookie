@@ -21,7 +21,7 @@ public class QnADAO {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			
-			String url = "jdbc:oracle:thin:@localhost:1521:xe";
+			String url = "jdbc:oracle:thin:@121.147.0.156:1521:xe";
 			String dbid = "cookie";
 			String dbpw = "cookie";
 			
@@ -83,7 +83,7 @@ public class QnADAO {
 		
 	    String date1 = date.format(today);
 		
-	    String date2 = "2021-07-24";
+	    String date2 = "2021-07-25";
 
 	    System.out.println();
 	    

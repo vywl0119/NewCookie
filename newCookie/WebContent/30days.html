@@ -66,6 +66,7 @@
 
 						<!-- Post -->
 							<article class="post">
+							<form action="ChallengeServiceCon" method = "post" accept-charset="EUC-KR">
 								<header align ="center">
 									<div class="title">
 										<h2><a href="#">OBO Diary</a></h2>
@@ -76,7 +77,17 @@
 								</header>
 								
 								금액
-								 <input type="text" name="money" placeholder="금액을 입력해주세요." align="center">
+								
+								<select id="money" name="money" aria-label="금액">
+                                		<option value="" selected="금액을 선택해주세요.">금액을 선택해주세요</option>
+                                        <option value="1000">1,000원</option>
+                                        <option value="5000">5,000원</option>
+                                        <option value="10000">10,000원</option>
+                                        <option value="30000">30,000원</option>
+                                        <option value="50000">50,000원</option>
+                                        
+                           		</select>
+								
 								 <br><br>
 								  목표 습관
 								 <input type="text" name="field" placeholder="목표습관을 입력해주세요." align="center">
@@ -86,7 +97,7 @@
 								 <input type="date" name="start"  align="center">
 								  
 								종료날짜
-								 <input type="date" name="finish"  align="center">
+								 <input type="date" name="end"  align="center">
 								  <br><br><br>
 								  
 								  환급계좌번호
@@ -96,6 +107,7 @@
 								 
 								
 								<input type="submit" value="DONE!">
+								</form>
 								<br><br><br>
 								
 								

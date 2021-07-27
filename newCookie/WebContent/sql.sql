@@ -43,8 +43,8 @@ create sequence qna_seq
 2-3. 테스트 값 넣기
 insert into qna values(qna_seq.nextval,'test','test')
 
-drop table qna cascade constraints;
-drop sequence qna_seq;
+drop table my_challenge cascade constraints;
+drop sequence challenge_seq;
 
 2-4. 확인
 select * from qna
@@ -57,6 +57,29 @@ insert into qna values(qna_seq.nextval,'어린 시절 꿈은 무엇이었나요?','');
 insert into qna values(qna_seq.nextval,'평소 갈등을 해결하는 방안은 무엇인가요?','타인의 갈등에 나선 적이 있나요?');
 insert into qna values(qna_seq.nextval,'가장 열정적으로 했던 일은 무엇인가요?','결과에 만족했나요?');
 
+3. 챌린지
+
+3-1. 챌린지 테이블 생성
+create table my_challenge(
+c_number number,
+m_id varchar2(20) not null,
+habit varchar2(50) not null,
+money number not null,
+account varchar2(30) not null,
+start_date date not null,
+end_date date not null,
+constraint my_challenge_c_number_pk primary key(c_number),
+constraint my_challenge_m_id_fk foreign key(m_id)
+references member(m_id)
+)
+
+3-2. 챌린지 시퀀스 만들기
+create sequence challenge_seq
+		increment by 1
 
 
+3-3. 챌린지 데이터 삽입
+insert into my_challenge values (challenge_seq.nextval,'test','test',119,'test','210727','210727')
 
+
+select * from MY_CHALLENGE

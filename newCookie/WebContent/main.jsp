@@ -55,7 +55,7 @@
                      <ul>
                       <li><a href="#">달력</a></li>
                             <li><a href="#">Q&A</a></li>
-                            <li><a href="#">30 Days</a></li>
+                            <li><a href="30days.jsp">30 Days</a></li>
                                <li><a href="#">자기소개서</a></li>
                             <li><a href="#">키워드</a></li>
                               <li><a href="#">릴레이</a></li>

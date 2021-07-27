@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class QnADAO {
+
 	Connection conn = null;
 	PreparedStatement psmt = null;
 	int cnt = 0;
@@ -111,3 +112,8 @@ public class QnADAO {
 	
 
 }
+
+   
+
+
+

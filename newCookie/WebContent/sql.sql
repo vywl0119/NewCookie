@@ -38,7 +38,7 @@ constraint QnA_q_main_uk unique(q_main)
 
 2-2. QnA 시퀀스 생성
 create sequence qna_seq
-				increment by 1
+		increment by 1
 
 2-3. 테스트 값 넣기
 insert into qna values(qna_seq.nextval,'test','test')
@@ -56,5 +56,7 @@ insert into qna values(qna_seq.nextval,'삶을 살아가면서 가장 기뻤던 일은 무엇이�
 insert into qna values(qna_seq.nextval,'어린 시절 꿈은 무엇이었나요?','');
 insert into qna values(qna_seq.nextval,'평소 갈등을 해결하는 방안은 무엇인가요?','타인의 갈등에 나선 적이 있나요?');
 insert into qna values(qna_seq.nextval,'가장 열정적으로 했던 일은 무엇인가요?','결과에 만족했나요?');
+
+
 
 

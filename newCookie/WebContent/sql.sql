@@ -30,8 +30,8 @@ select * from member
 2-1. QnA 테이블 생성
 create table QnA(
 q_number number,
-q_main varchar2(50) not null,
-q_sub varchar2(50),
+q_main varchar2(100) not null,
+q_sub varchar2(100),
 constraint QnA_q_number_pk primary key(q_number),
 constraint QnA_q_main_uk unique(q_main)
 )
@@ -43,7 +43,18 @@ create sequence qna_seq
 2-3. 테스트 값 넣기
 insert into qna values(qna_seq.nextval,'test','test')
 
+drop table qna cascade constraints;
+drop sequence qna_seq;
+
 2-4. 확인
 select * from qna
+
+2-5. 값 넣기
+insert into qna values(qna_seq.nextval,'자신만의 스트레스 해소법이 있나요?','');
+insert into qna values(qna_seq.nextval,'타인과 협업해서 프로젝트를 해본 경험이 있나요?','있었다면 프로젝트 속 자신의 역할은 무엇이였나요?');
+insert into qna values(qna_seq.nextval,'삶을 살아가면서 가장 기뻤던 일은 무엇이었나요?','');
+insert into qna values(qna_seq.nextval,'어린 시절 꿈은 무엇이었나요?','');
+insert into qna values(qna_seq.nextval,'평소 갈등을 해결하는 방안은 무엇인가요?','타인의 갈등에 나선 적이 있나요?');
+insert into qna values(qna_seq.nextval,'가장 열정적으로 했던 일은 무엇인가요?','결과에 만족했나요?');
 
 

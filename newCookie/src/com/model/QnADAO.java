@@ -5,7 +5,9 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class QnADAO {
 	Connection conn = null;
@@ -71,6 +73,41 @@ public class QnADAO {
 			close();
 		} return qna_list;
 	}
+	
+	public int date(){
+	// 오늘 날짜 가져오기
+		Date today = new Date();
+
+	    SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd");
+		
+	    String date1 = date.format(today);
+		
+	    String date2 = "2021-07-24";
+
+	    System.out.println();
+	    
+	    try{ 
+			
+			SimpleDateFormat format = new SimpleDateFormat("yyyy-mm-dd");
+	        
+			
+			Date FirstDate = format.parse(date1);
+			Date SecondDate = format.parse(date2);
+	        
+			
+			long calDate = FirstDate.getTime() - SecondDate.getTime(); 
+	        
+
+			long cntt = calDate / (24*60*60*1000); 
+			
+			cnt = (int)Math.abs(cntt);
+	        
+			
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		} return cnt;
+}
 	
 
 }

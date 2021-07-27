@@ -1,4 +1,7 @@
 
+<%@page import="com.sun.org.apache.xerces.internal.impl.xpath.regex.ParseException"%>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.util.Date"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.model.QnADAO"%>
 <%@page import="com.model.QnADTO"%>
@@ -31,13 +34,16 @@
 	<body class="is-preload">
 
 <%
+	
 	// 로그인한 닉네임 가져오기
 	MemberDTO info = (MemberDTO)session.getAttribute("info");
 	QnADAO dao = new QnADAO();
 	ArrayList<QnADTO> qna_list = new ArrayList<QnADTO>();
 	qna_list = dao.showQnA();
 	
+	int cnt = dao.date();
 	
+
 
 %>
 
@@ -99,10 +105,17 @@
 				<article class="post">
 								<header>
 									<div class="title">
-										<h2><a href="single.html"><%=qna_list.get(0).getNumber() %></a></h2>
+										<h2><a href="single.html"><%=qna_list.get(cnt).getNumber() %></a></h2>
 										<br>
-										<h2><%=qna_list.get(0).getMain()%></h2>
-										<p><%=qna_list.get(0).getSub()%> </p>
+										<h2><%=qna_list.get(cnt).getMain()%></h2>
+										
+										<% if(qna_list.get(cnt).getSub()!=null){%>
+										
+											<p><%=qna_list.get(cnt).getSub()%> </p>
+											
+										<%}else{ %>
+											<p></p>
+										<%} %>
 									</div>
 									<div class="meta">
 										<time class="published" datetime="2015-11-01">07 26, 2021</time>

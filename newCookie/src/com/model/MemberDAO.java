@@ -18,7 +18,7 @@ public class MemberDAO {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			
-			String url = "jdbc:oracle:thin:@121.147.0.156:1521:xe";
+			String url = "jdbc:oracle:thin:@localhost:1521:xe";
 			String dbid = "cookie";
 			String dbpw = "cookie";
 			
@@ -93,8 +93,8 @@ public class MemberDAO {
 	         rs = psmt.executeQuery();
 	         
 	         if(rs.next()) {
-	        	String id = rs.getString("m_id");
-	            String nickname = rs.getString("nickname");
+	        	String id = rs.getString(1);
+	            String nickname = rs.getString(4);
 	            
 	            info = new MemberDTO(id,nickname);
 	            		

@@ -1,3 +1,4 @@
+
 <%@page import="com.model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
@@ -35,7 +36,7 @@
 		<!-- Header -->
 		
 		<header id="menu_bar">
-						<h1><a href="index.html">OBO Diary</a></h1>
+						<h1><a href="main.jsp">OBO Diary</a></h1>
 						<nav class="links">
 							<ul>
 							 <li><a href="#">달력</a></li>
@@ -57,9 +58,9 @@
 			
 					<div class="inner">
 						<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
-						<h1><strong><%= info.getNickname()%></strong>, 님 어서오세요<br />
+						<h1><strong></strong><%=info.getNickname() %>, 님 어서오세요<br />
 						<h4> 오늘도 OBO Diary를<br> 찾아주셔서 감사합니다.<br /></h4>
-						 <a href="#"  style="font-size: 2px"> 로그아웃    </a> <a href="#"  style="margin-left: 10px; font-size: 2px">  프로필 수정   </a> <a href="#"  style="margin-left: 10px; font-size: 2px">   개인정보 수정  </a>
+						 <a href="LogoutServiceCon"  style="font-size: 2px"> 로그아웃    </a> <a href="#"  style="margin-left: 10px; font-size: 2px">  프로필 수정   </a> <a href="#"  style="margin-left: 10px; font-size: 2px">   개인정보 수정  </a>
 					</div>
 			<%}else{ %>
 			
@@ -77,7 +78,7 @@
 						 </form>
 						
 						 <a href="#"  style="font-size: 2px"> 아이디 찾기   </a> <a href="#"  style="margin-left: 10px; font-size: 2px"> 비밀번호 찾기  </a>
-						 <a href="#"  style="margin-left: 10px; font-size: 2px"> 회원가입  </a>
+						 <a href="join.html"  style="margin-left: 10px; font-size: 2px"> 회원가입  </a>
 					</div>
 				
 			<%} %>

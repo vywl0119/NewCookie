@@ -1,4 +1,7 @@
 
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.model.QnADAO"%>
+<%@page import="com.model.QnADTO"%>
 <%@page import="com.model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
@@ -30,6 +33,11 @@
 <%
 	// 로그인한 닉네임 가져오기
 	MemberDTO info = (MemberDTO)session.getAttribute("info");
+	QnADAO dao = new QnADAO();
+	ArrayList<QnADTO> qna_list = new ArrayList<QnADTO>();
+	qna_list = dao.showQnA();
+	
+	
 
 %>
 
@@ -91,22 +99,37 @@
 				<article class="post">
 								<header>
 									<div class="title">
-										<h2><a href="single.html">질문번호</a></h2>
+										<h2><a href="single.html"><%=qna_list.get(0).getNumber() %></a></h2>
 										<br>
-										<h2>당신은 친구에게 얼마나 돈을 빌려주실 수 있나요?</h2>
-										<p>오늘 친구에게 빌려줄 수 있는 금액은? </p>
+										<h2><%=qna_list.get(0).getMain()%></h2>
+										<p><%=qna_list.get(0).getSub()%> </p>
 									</div>
 									<div class="meta">
 										<time class="published" datetime="2015-11-01">07 26, 2021</time>
 										<a href="#" class="author"><span class="name">1번째  7월</span><img src="images/avatar.jpg" alt=""></a>
 									</div>
 								</header>
-								<a href="single.html" class="image featured"><img src="images/pic01.jpg" alt=""></a>
-								<p> 로그인 하셔야 이용할 수 있는 페이지 입니다. </p>
-								<footer>
-									<ul class="actions" style="margin-left: 175px;">
-										<li ><a href="join.html"  class="button large">회원가입 하러 가기 </a></li>
-									</ul>
+								
+								
+								<%if(info==null){ %>
+									<a href="join.jsp" class="image featured"><img src="images/pic01.jpg" alt=""></a>
+										<p> 로그인 하셔야 이용할 수 있는 페이지 입니다. </p>
+									<footer>
+										<ul class="actions" style="margin-left: 175px;">
+											<li ><a href="join.html"  class="button large">회원가입 하러 가기 </a></li>
+										</ul>
+								<%}else{ %>								
+									<a href="single.html" class="image featured"><img src="images/pic01.jpg" alt=""></a>
+										<p>유저의 답변을 받아 적는 곳이에여 </p>
+									<footer>
+										<ul class="actions" style="margin-left: 175px;">
+											<li ><a href="main.jsp"  class="button large">제출하기 </a></li>
+										</ul>
+									
+								<%} %>
+		
+										
+									
 									<ul class="stats">
 										<li><a href="#" class="icon solid fa-heart"></a></li>
 										<li><a href="#" class="icon solid fa-comment"></a></li>

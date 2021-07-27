@@ -25,3 +25,25 @@ insert into member values(?,?,?,?,?,?,?)
 1-3. 확인
 select * from member
 
+2. QnA 테이블
+
+2-1. QnA 테이블 생성
+create table QnA(
+q_number number,
+q_main varchar2(50) not null,
+q_sub varchar2(50),
+constraint QnA_q_number_pk primary key(q_number),
+constraint QnA_q_main_uk unique(q_main)
+)
+
+2-2. QnA 시퀀스 생성
+create sequence qna_seq
+				increment by 1
+
+2-3. 테스트 값 넣기
+insert into qna values(qna_seq.nextval,'test','test')
+
+2-4. 확인
+select * from qna
+
+

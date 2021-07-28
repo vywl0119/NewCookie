@@ -3,8 +3,23 @@
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html>
+
+ <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth'
+        });
+        calendar.render();
+      });
+
+    </script>
+
 <head>
 <meta charset="EUC-KR">
+<link href='fullcalendar/main.css' rel='stylesheet' />
+    <script src='fullcalendar/main.js'></script>
 <title>Insert title here</title>
 
 		
@@ -18,7 +33,11 @@
  	 			height:30px;
  	 				
 			}
+		#calender {
 		
+		 width:300px;
+ 	 	 sheight:300px;
+		}
 			
 		</style>
 
@@ -61,6 +80,7 @@
 						<h4> 오늘도 OBO Diary를<br> 찾아주셔서 감사합니다.<br /></h4>
 						 <a href="#"  style="font-size: 2px"> 로그아웃    </a> <a href="#"  style="margin-left: 10px; font-size: 2px">  프로필 수정   </a> <a href="#"  style="margin-left: 10px; font-size: 2px">   개인정보 수정  </a>
 					</div>
+					<div id='calendar'></div>
 			<%}else{ %>
 			
 			
@@ -79,6 +99,8 @@
 						 <a href="#"  style="font-size: 2px"> 아이디 찾기   </a> <a href="#"  style="margin-left: 10px; font-size: 2px"> 비밀번호 찾기  </a>
 						 <a href="#"  style="margin-left: 10px; font-size: 2px"> 회원가입  </a>
 					</div>
+					
+					<div id='calendar'></div>
 				
 			<%} %>
 			</header>

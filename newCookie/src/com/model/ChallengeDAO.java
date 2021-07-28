@@ -32,7 +32,7 @@ public class ChallengeDAO {
 
 	   }
 	   
-	   // DB ¹®´Ý´Â ¸Þ¼Òµå
+	   // DB ï¿½ï¿½ï¿½Ý´ï¿½ ï¿½Þ¼Òµï¿½
 	   public void close() {
 	      try {
 	         if(rs != null) {
@@ -51,28 +51,28 @@ public class ChallengeDAO {
 	   
 	   public int insert(ChallengeDTO dto) {   
 
-		      // DB ¿¬°á ¸Þ¼Òµå È£Ãâ
+		      // DB ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¼Òµï¿½ È£ï¿½ï¿½
 		      try {
-		      conn();
-		      
-		      String sql = "insert into my_challenge values (challenge_seq.nextval,?,?,?,?,?,?)";
-		      
-		      psmt = conn.prepareStatement(sql);
-		      
-		      psmt.setString(1, dto.getM_id() );
-		      psmt.setString(2, dto.getHabit());
-		      psmt.setInt(3, dto.getMoney());
-		      psmt.setString(4, dto.getAccount());
-		      psmt.setString(5, dto.getStart_date());
-		      psmt.setString(6, dto.getEnd_date());
-
-		      cnt = psmt.executeUpdate();
+			      conn();
+			      
+			      String sql = "insert into my_challenge values (challenge_seq.nextval,?,?,?,?,?,?)";
+			      
+			      psmt = conn.prepareStatement(sql);
+			      
+			      psmt.setString(1, dto.getM_id() );
+			      psmt.setString(2, dto.getHabit());
+			      psmt.setInt(3, dto.getMoney());
+			      psmt.setString(4, dto.getAccount());
+			      psmt.setString(5, dto.getStart_date());
+			      psmt.setString(6, dto.getEnd_date());
+	
+			      cnt = psmt.executeUpdate();
 		      
 		      }
 		      catch (SQLException e) {
 		         e.printStackTrace();
 		      } finally {
-		         // DB ¹® ´Ý´Â ¸Þ¼Òµå È£Ãâ
+		         // DB ï¿½ï¿½ ï¿½Ý´ï¿½ ï¿½Þ¼Òµï¿½ È£ï¿½ï¿½
 		         close();
 		      }
 		      return cnt;

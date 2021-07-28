@@ -29,26 +29,6 @@
     <script src='fullcalendar/main.js'></script>
 <title>Insert title here</title>
 
-<<<<<<< HEAD
-		
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main_log.css" />
-		<style type="text/css">
-		
-		#header input{
- 					 width:300px;
- 	 			height:30px;
- 	 				
-			}
-		#calender {
-		
-		 width:300px;
- 	 	 sheight:300px;
-		}
-			
-		</style>
-=======
       
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -63,7 +43,6 @@
       
          
       </style>
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-IITP-Bigdata-3/NewCookie.git
 
 
 </head>

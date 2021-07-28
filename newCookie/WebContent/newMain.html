@@ -1,71 +1,55 @@
-<<<<<<< HEAD
-<!DOCTYPE html>
-<html lang='en'>
-  <head>
-    <meta charset='utf-8' />
-    <link href='fullcalendar/main.css' rel='stylesheet' />
-    <script src='fullcalendar/main.js'></script>
-    <script>
-=======
 <!DOCTYPE HTML>
-<!--
-	Future Imperfect by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
+
 	<head>
 		<title>Single - Future Imperfect by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/join.css" />
+		<link rel="stylesheet" href="assets/css_newMain/main.css" />
+		<link href='fullcalendar/main.css' rel='stylesheet' />
+  		 <script src='fullcalendar/main.js'></script>
+  			  <script>
+	
+    		  document.addEventListener('DOMContentLoaded', function() {
+      		  var calendarEl = document.getElementById('calendar');
+      		  var calendar = new FullCalendar.Calendar(calendarEl, {
+      			    initialView: 'dayGridMonth'
+      		  });
+       	 calendar.render();
+     	 });
+
+ 		   </script>
+		
+		
+		
 	</head>
 	<body class="single is-preload">
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-IITP-Bigdata-3/NewCookie.git
 
-      document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: 'dayGridMonth'
-        });
-        calendar.render();
-      });
+		<!-- Wrapper -->
+			<div id="wrapper" >
 
-<<<<<<< HEAD
-    </script>
-  </head>
-  <body>
-    <div id='calendar'></div>
-  </body>
-=======
 				<!-- Header -->
 					<header id="header">
-						<h1><a href="index.html">Future Imperfect</a></h1>
+						<h1><a href="index.html">OBO Diary</a></h1>
 						<nav class="links">
 							<ul>
-								<li><a href="#">Lorem</a></li>
-								<li><a href="#">Ipsum</a></li>
-								<li><a href="#">Feugiat</a></li>
-								<li><a href="#">Tempus</a></li>
-								<li><a href="#">Adipiscing</a></li>
+							 <li><a href="#">달력</a></li>
+                        	 <li><a href="#">Q&A</a></li>
+                        	 <li><a href="#">30 Days</a></li>
+                       	 	 <li><a href="#">자기소개서</a></li>
+                        	 <li><a href="#">키워드</a></li>
+                       		 <li><a href="#">릴레이</a></li>
 							</ul>
 						</nav>
-						<div id="calendar"></div>
-<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
-						<nav class="main">
-							<ul>
-								<li class="search">
-									<a class="fa-search" href="#search">Search</a>
-									<form id="search" method="get" action="#">
-										<input type="text" name="query" placeholder="Search" />
-									</form>
-								</li>
-								<li class="menu">
-									<a class="fa-bars" href="#menu">Menu</a>
-								</li>
-							</ul>
-						</nav>
+						
 					</header>
+					
+					
+		
+			
+					
+					
 
 				<!-- Menu -->
 					<section id="menu">
@@ -120,7 +104,7 @@
 					<div id="main">
 
 						<!-- Post -->
-							<article class="post">
+							<article class="post" style="width: 1363.5px;padding-left: 40px;padding-right: 40px; ">
 								<header>
 									<div class="title">
 										<h2><a href="#">Magna sed adipiscing</a></h2>
@@ -131,7 +115,7 @@
 										<a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
 									</div>
 								</header>
-								<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
+								 <div id='calendar'></div>
 								<p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
 								<p>Nunc quis dui scelerisque, scelerisque urna ut, dapibus orci. Sed vitae condimentum lectus, ut imperdiet quam. Maecenas in justo ut nulla aliquam sodales vel at ligula. Sed blandit diam odio, sed fringilla lectus molestie sit amet. Praesent eu tortor viverra lorem mattis pulvinar feugiat in turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce ullamcorper tellus sit amet mattis dignissim. Phasellus ut metus ligula. Curabitur nec leo turpis. Ut gravida purus quis erat pretium, sed pellentesque massa elementum. Fusce vestibulum porta augue, at mattis justo. Integer sed sapien fringilla, dapibus risus id, faucibus ante. Pellentesque mattis nunc sit amet tortor pellentesque, non placerat neque viverra. </p>
 								<footer>
@@ -167,5 +151,4 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-IITP-Bigdata-3/NewCookie.git
 </html>

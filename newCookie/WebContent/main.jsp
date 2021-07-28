@@ -10,10 +10,45 @@
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html>
+
+ <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth'
+        });
+        calendar.render();
+      });
+
+    </script>
+
 <head>
 <meta charset="EUC-KR">
+<link href='fullcalendar/main.css' rel='stylesheet' />
+    <script src='fullcalendar/main.js'></script>
 <title>Insert title here</title>
 
+<<<<<<< HEAD
+		
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main_log.css" />
+		<style type="text/css">
+		
+		#header input{
+ 					 width:300px;
+ 	 			height:30px;
+ 	 				
+			}
+		#calender {
+		
+		 width:300px;
+ 	 	 sheight:300px;
+		}
+			
+		</style>
+=======
       
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -28,6 +63,7 @@
       
          
       </style>
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-IITP-Bigdata-3/NewCookie.git
 
 
 </head>
@@ -47,6 +83,62 @@
 
 %>
 
+<<<<<<< HEAD
+		<!-- Header -->
+		
+		<header id="menu_bar">
+						<h1><a href="index.html">OBO Diary</a></h1>
+						<nav class="links">
+							<ul>
+							 <li><a href="#">달력</a></li>
+                        	 <li><a href="#">Q&A</a></li>
+                        	 <li><a href="#">30 Days</a></li>
+                       	 	 <li><a href="#">자기소개서</a></li>
+                        	 <li><a href="#">키워드</a></li>
+                       		 <li><a href="#">릴레이</a></li>
+							</ul>
+						</nav>
+						<nav class="main">
+							
+						</nav>
+					</header>
+		
+		
+			<header id="header">
+			<%if(info!=null){ %>
+			
+					<div class="inner">
+						<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
+						<h1><strong><%= info.getNickname()%></strong>, 님 어서오세요<br />
+						<h4> 오늘도 OBO Diary를<br> 찾아주셔서 감사합니다.<br /></h4>
+						 <a href="#"  style="font-size: 2px"> 로그아웃    </a> <a href="#"  style="margin-left: 10px; font-size: 2px">  프로필 수정   </a> <a href="#"  style="margin-left: 10px; font-size: 2px">   개인정보 수정  </a>
+					</div>
+					<div id='calendar'></div>
+			<%}else{ %>
+			
+			
+			
+					<div class="inner">
+						<a href="#" class="image avatar"><img   src="images/avatar.jpg" alt="" /></a>	 
+						 <form action="LoginServiceCon" method = "post" accept-charset="EUC-KR">
+						 <input width="300px" placeholder="ID를 입력하세요." style="margin-top: 2px;" type="text" id="id" name="id" >
+						 <br>
+						 <input placeholder="PW를 입력하세요." style="margin-top: 2px;" type="password" id="pw" name="pw"> 
+						 <br>
+						 <input  type="submit" id="btn_login" value="로그인">
+						
+						 </form>
+						
+						 <a href="#"  style="font-size: 2px"> 아이디 찾기   </a> <a href="#"  style="margin-left: 10px; font-size: 2px"> 비밀번호 찾기  </a>
+						 <a href="#"  style="margin-left: 10px; font-size: 2px"> 회원가입  </a>
+					</div>
+					
+					<div id='calendar'></div>
+				
+			<%} %>
+			</header>
+			
+=======
       <!-- Header -->
       
       <header id="menu_bar">
@@ -98,6 +190,7 @@
          <%} %>
          </header>
          
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-IITP-Bigdata-3/NewCookie.git
 
       
          <div id="main">

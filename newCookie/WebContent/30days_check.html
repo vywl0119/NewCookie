@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<head>
+		<title>Single - Future Imperfect by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css_newMain/main.css" />
+	
+	</head>
+	<body class="single is-preload" align="center">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" align="left">
+						 <h1><a href="index.html">OBO Diary</a></h1>
+                  <nav class="links">
+                     <ul>
+                        <li><a href="#">달력</a></li>
+                        <li><a href="#">Q&A</a></li>
+                        <li><a href="#">30 Days</a></li>
+                        <li><a href="#">자기소개서</a></li>
+                        <li><a href="#">키워드</a></li>
+                        <li><a href="#">릴레이</a></li>
+                     </ul>
+                  </nav>
+						<div id="calendar"></div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
+						
+					</header>
+
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<article class="post">
+							<form action="ChallengeServiceCon" method = "post" accept-charset="EUC-KR">
+								<header align ="center">
+									<div class="title">
+										<h2><a href="#">OBO Diary</a></h2>
+										<p>30 days</p>
+										<p>오늘 챌린지를 인증해주세요:)</p>
+									</div>
+									
+								</header>
+								
+									<div id = "board">
+				<form action = "WriteBoardServiceCon" method="post" enctype="multipart/form-data">
+				<table id="list">
+					
+					<tr>
+						
+						<td>
+						<select id="challenge" name="challenge" aria-label="금액">
+                                		<option value="" selected="챌린지를 선택해주세요 :)">챌린지를 선택해주세요 :)</option>
+                                        <option value="one">하루에 재채기 세번 연속으로하기</option>
+                                        <option value="two">추가된 챌린지</option>
+                                        <option value="three">추가된 챌린지</option>
+                                       
+                                        
+                        </select> 
+                        </td>
+					</tr>
+					<tr>
+						<td colspan="2">내용</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<input  type="file" name="fileName" style="float: right;">
+							<textarea name="content" rows="10" style="resize: none;"  placeholder="성공한 자신에게 응원의 메시지를 남겨보세요:)" ></textarea>			
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<input type="reset" value="초기화">
+							<input type="submit" value="제출하기">
+						</td>
+					</tr>
+				</table>
+				</form>
+			</div>
+								
+
+
+				<!-- Footer -->
+					<section id="footer">
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
+							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<p class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a href="http://unsplash.com">Unsplash</a>.</p>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -56,11 +56,11 @@
 								<form action="joinProgram" method ="post">
 									<fieldset align = "center">
 										<legend> 키워드</legend>
-										칭찬 <input type="checkbox"  name="keyword"> <br>
-										변화 <input type="checkbox"  name="keyword"> <br>
-										긍정적인 <input type="checkbox"  name="keyword"> <br>
-										정리 <input type="checkbox"  name="keyword"> <br>
-										<input type="submit" value = "회원가입">					
+										태양쌤 <input type="checkbox"  name="keyword"> <br>
+										도와주세요 <input type="checkbox"  name="keyword"> <br>
+										이게  <input type="checkbox"  name="keyword"> <br>
+										왜 안 나올까요? <input type="checkbox"  name="keyword"> <br><br>
+										<input type="submit" value = "제출하기">					
 									</fieldset>
 								</form>
 								

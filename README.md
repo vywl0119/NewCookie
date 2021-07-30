@@ -10,7 +10,7 @@ OBO Diary 취준생을 위한 나를 찾아가는 질문 다이어리
 - LoginServiceCon, LoginServiceCon 생성 및 연결 ( 로그인 / 로그아웃 )
 - Q&A 화면 구현
 - QnADTO, QnADAO 생성 및 연결
-- 챌린지 화면 구현
+- 챌린지 가입 화면 구현
 - ChallengeDTO, ChallengeDAO, ChallengeServiceCon 생성 및 연결 
 - 자소서예시 샘플 수집
 - 키워드 수집
@@ -26,12 +26,15 @@ OBO Diary 취준생을 위한 나를 찾아가는 질문 다이어리
 
 # 2021.07.29
 - 챌린지 화면 수정
+- 챌린지 인증 화면 구현
 - 챌린지 DB연결 및 날짜랑 습관 가져오기
 - 키워드 화면 구현
 - QNA 보관함 구현 및 연결
 
 # 2021.07.30
 - 자소서 화면 구현
+- 키워드 화면 수정 
+- 자신이 선택한 키워드 샘플 확인하는 화면 구현
 - KeywordDTO, KeywordDAO, keywordServiceCon 생성 및 연결
 - 유저가 선택한 키워드 별 상응하는 mbti추출 후 그에 맞는 자소서 샘플 화면에 뿌려주기 구현
 - 달력 수정

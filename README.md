@@ -23,6 +23,8 @@
 
 [6. 시연 영상](#6-시연-영상)
 
+[7. 개발 날짜](#7-개발-날짜)
+
 
 ***
 
@@ -128,6 +130,7 @@
 
 ## 3. 서비스 FLOW
   - `서비스 흐름도`
+<br>
 ![쿠키흐름도](https://user-images.githubusercontent.com/43737828/177003577-ced5f907-8f98-446f-86da-7dd6cd66c71b.PNG)
 <br>
 
@@ -166,22 +169,10 @@
 ## 6. 시연 영상
 https://www.youtube.com/watch?v=hNHztwnTPEE&t=15s
 
-<br><br><br>
-<br><br><br>
-###### Readme 템플릿 참고 : KT AIVLE SCHOOL 1기 전남/전북1반 안지예
+<br><br>
 
-
-
-
-
-
-
-
-
-
+## 7. 개발 날짜
 <details>
-# NewCookie
-OBO Diary 취준생을 위한 나를 찾아가는 질문 다이어리
 
 # 2021.07.26 
 - join.html 생성
@@ -261,3 +252,7 @@ OBO Diary 취준생을 위한 나를 찾아가는 질문 다이어리
 - 시연영상제작
 - 최종 발표
 </details>
+
+<br><br><br>
+<br><br><br>
+###### Readme 템플릿 참고 : KT AIVLE SCHOOL 1기 전남/전북1반 안지예

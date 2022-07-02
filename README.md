@@ -54,7 +54,6 @@
 
 
 <br>
-
 ## 2. 기능 및 UI/UX
 - `서비스 주요 기능`
  <details>
@@ -129,8 +128,7 @@
 <br>
 
 ## 3. 서비스 FLOW
-  - `서비스 흐름도`
-<br>
+  - `서비스 흐름도`<br>
 ![쿠키흐름도](https://user-images.githubusercontent.com/43737828/177003577-ced5f907-8f98-446f-86da-7dd6cd66c71b.PNG)
 <br>
 

@@ -136,7 +136,7 @@
 ## 4. DB 설계
   - `ERD`
   
-![ER다ㅣ어그램](https://user-images.githubusercontent.com/43737828/176195140-620e0c7e-0c99-493e-9f6f-0d3689ed1cad.jpg)
+
 
 <br>
 

@@ -135,7 +135,7 @@
 
 ## 4. DB 설계
   - `ERD`
-  
+![obo_Db](https://user-images.githubusercontent.com/43737828/177489598-27648a8a-67c7-4282-9b38-18577a920b84.PNG)
 
 
 <br>

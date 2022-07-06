@@ -115,9 +115,9 @@
      <br>
      <text>⇒ 최대 3개 습관 챌린지를 할 수 있다.</text>
      <br><br>
-     <img src="https://user-images.githubusercontent.com/43737828/177003393-d0bff185-817e-4795-9790-ae6eb6547165.png" width="850" height="500">  
+     <img src="https://user-images.githubusercontent.com/43737828/177003393-d0bff185-817e-4795-9790-ae6eb6547165.png" width="850" height="400">  
      <br>
-     <text>⇒ 매일 자신이 신청한 습관에 대한 사진을 올린다</text>
+     <text>⇒ 매일 자신이 신청한 습관에 대한 사진을 올리고 달력으로 현황을 확인 할 수 있다</text>
      <br><br>
    </div>
  </details>
